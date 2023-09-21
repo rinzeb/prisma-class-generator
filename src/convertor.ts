@@ -150,7 +150,7 @@ export class PrismaConvertor {
 	): DecoratorComponent => {
 		const options: SwaggerDecoratorParams = {}
 		const name =
-			dmmfField.isRequired === true && !dmmfField.isGenerated
+			dmmfField.isRequired === true && !dmmfField.hasDefaultValue
 				? 'ApiProperty'
 				: 'ApiPropertyOptional'
 		const decorator = new DecoratorComponent({
