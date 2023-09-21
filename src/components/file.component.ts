@@ -102,8 +102,9 @@ export class FileComponent implements Echoable {
 		})
 
 		if (this.prismaClass.types) {
-			this.prismaClass.types.forEach(type => {
-				this.registerImport(type + "Type", "./" + type.toLowerCase() + "_type")
+			this.prismaClass.types.forEach((type) => {
+				// this.registerImport(type + "Type", "./" + type.toLowerCase() + "_type")
+				this.registerImport(type, './' + type.toLowerCase())
 			})
 		}
 
